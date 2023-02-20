@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing react app Инпут, батон и хелло ворлд есть на странице 1`] = `
+<input
+  placeholder="input value..."
+  type="text"
+  value=""
+/>
+`;
