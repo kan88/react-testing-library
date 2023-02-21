@@ -17,10 +17,6 @@ describe('Testing react app', () => {
                   "id": 2,
                   "name": "Ervin Howell",
                   
-                },
-                {
-                  "id": 3,
-                  "name": "Clementine Bauch",
                 }
           ]
       }
@@ -30,7 +26,7 @@ describe('Testing react app', () => {
     axios.get.mockReturnValue(response)
     render(<Users/>)
     const users = await screen.findAllByTestId('user__item')
-    expect(users.length).toBe(3);
+    expect(users.length).toBe(2);
     expect(axios.get).toBeCalledTimes(1)
     // eslint-disable-next-line testing-library/no-debugging-utils
     // screen.debug();
