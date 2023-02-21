@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+// import userEvent from '@testing-library/user-event';
 import App from './App';
 
 describe('Testing react app', () => {
@@ -22,7 +22,7 @@ describe('Testing react app', () => {
 
   test('асинхронный поиск через find', async () => {
     render(<App />);
-    const objectElement = await screen.findByText(/data/i);
+    const objectElement = await screen.findByText(/Jest react testing/i);
     expect(objectElement).not.toBeNull();
     expect(objectElement).toBeInTheDocument();
     expect(objectElement).toHaveStyle({color: 'red'});
@@ -43,11 +43,11 @@ describe('Testing react app', () => {
     const input = screen.getByPlaceholderText(/input value/i)
     expect(screen.queryByTestId('input__title')).toContainHTML('')
     //fireEvent искусственное событие userEvent более полная эмуляция
-    // fireEvent.input(input, {
-    //   target: {value: '123'}
-    // })
+    fireEvent.input(input, {
+      target: {value: '123'}
+    })
 
-    userEvent.type(input, '123')
+    // userEvent.type(input, '123')
     expect(screen.queryByTestId('input__title')).toContainHTML('123')
 
   });
