@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Users from '../../components/users/users.jsx';
 import Nav from '../../components/nav/nav.jsx';
 
 
@@ -26,7 +25,6 @@ export default function Start() {
       <button data-testid='toggle__btn' onClick={handleToggle}>click me</button>
       <input value={value} onInput={(evt) => setValue(evt.target.value)} type='text' placeholder='input value...'></input>
       <h1 data-testid='input__title'>{value}</h1>
-      <Users />
     </div>
   );
 }

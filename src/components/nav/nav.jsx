@@ -7,6 +7,7 @@ export default function Nav() {
             <Link to='/' data-testid="start__link">start</Link>
             <Link to='/about' data-testid="about__link">about</Link>
             <Link to='/main' data-testid="main__link">main</Link>
+            <Link to='/users' data-testid="main__link">users</Link>
         </div>
     )
 }

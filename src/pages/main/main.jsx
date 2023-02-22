@@ -3,9 +3,9 @@ import Nav from '../../components/nav/nav'
 
 export default function Main() {
     return (
-        <div data-testid="main">
+        <div >
             <Nav />
-            <h1>Main Page</h1>
+            <h1 data-testid="main__page">Main Page</h1>
 
         </div>
     )
